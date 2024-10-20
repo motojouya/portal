@@ -13,10 +13,3 @@ ENV TZ=Asia/Tokyo
 WORKDIR /srv
 
 ENTRYPOINT ["/bin/bash"]
-
-# USAGE
-# docker build -t portal:latest . --build-arg UID="$(id -u)" --build-arg GID="$(id -g)" --no-cache
-# docker container run -d -it --name portal -p 3000:3000 -v .:/srv portal
-# docker container start portal
-# docker container stop portal
-# docker container exec -it portal bash

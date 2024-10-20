@@ -1,0 +1,19 @@
+#!/bin/bash
+
+comm=$1
+
+if [ $comm = "build" ]; then
+  docker build -t portal:latest . --build-arg UID="$(id -u)" --build-arg GID="$(id -g)" --no-cache
+elif [ $comm = "up" ]; then
+  docker container run -d -it --name portal -p 3000:3000 -v .:/srv portal
+elif [ $comm = "start" ]; then
+  docker container start portal
+elif [ $comm = "stop" ]; then
+  docker container stop portal
+elif [ $comm = "ps" ]; then
+  docker container ps
+elif [ $comm = "portal" ]; then
+  docker container exec -it portal bash
+else
+  docker container exec -it portal npm run $comm
+fi
