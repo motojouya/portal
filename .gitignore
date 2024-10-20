@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# remix
+/.cache
+/build
+
+## Panda
+styled-system
+styled-system-studio
