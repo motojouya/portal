@@ -1,30 +1,27 @@
 import type { MetaFunction } from "@remix-run/node";
+import { css } from "@styled-system/css";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Takuya Sugiyama Portal" },
+    { name: "description", content: "Takuya Sugiyama Portal" },
   ];
 };
 
 export default function Index() {
   return (
     <div className="flex h-screen items-center justify-center">
+      <div className={css({ fontSize: "2xl", fontWeight: 'bold' })}>Hello 🐼!</div>
       <div className="flex flex-col items-center gap-16">
         <header className="flex flex-col items-center gap-9">
           <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
             Welcome to <span className="sr-only">Remix</span>
           </h1>
-          <div className="h-[144px] w-[434px]">
+          <div className={css({ heigth: "144px", width: '144px', borderRadius: '50%' })}>
             <img
-              src="/logo-light.png"
-              alt="Remix"
+              src="/icon.JPG"
+              alt="Takuya Sugiyama Image"
               className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
             />
           </div>
         </header>
