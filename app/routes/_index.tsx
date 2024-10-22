@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { css } from "@styled-system/css";
+import { flex, circle } from "@styled-system/patterns";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,23 +9,26 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const Header = () => (
+  <header className={flex({ direction: 'row', justify: 'space-between', alignItems: 'center', gap: '10px' })}>
+    <div>
+      <img
+        src="/icon.JPG"
+        alt="Takuya Sugiyama Image"
+        className={circle({ size: '144px', bg: 'black' })}
+      />
+    </div>
+    <h1 className={css({ flexGrow: '100'})}>
+      Takuya Sugiyama 杉山 拓也
+    </h1>
+  </header>
+);
+
 export default function Index() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className={css({ fontSize: "2xl", fontWeight: 'bold' })}>Hello 🐼!</div>
-      <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
-          </h1>
-          <div className={css({ heigth: "144px", width: '144px', borderRadius: '50%' })}>
-            <img
-              src="/icon.JPG"
-              alt="Takuya Sugiyama Image"
-              className="block w-full dark:hidden"
-            />
-          </div>
-        </header>
+    <main className={flex({ justify: 'center', w: '100%', p: '20px' })}>
+      <div className={flex({ direction: 'column', w: '100%', maxW: '1080px', gap: '20px'})}>
+        <Header />
         <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
           <p className="leading-6 text-gray-700 dark:text-gray-200">
             What&apos;s next?
@@ -46,7 +50,7 @@ export default function Index() {
           </ul>
         </nav>
       </div>
-    </div>
+    </main>
   );
 }
 
