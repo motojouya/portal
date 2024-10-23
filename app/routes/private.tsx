@@ -27,6 +27,16 @@ export default function Index() {
             が、まだ見せれるレベルにはありません。<br />
           </p>
         </Section>
+        <Section heading="rest contents">
+          <ul className={css({ listStyle: 'square outside', paddingLeft: '20px' })}>
+            <li>生活リズム</li>
+            <li>性格。飽きっぽいとか。雑談苦手とか</li>
+            <li>趣味の歴史</li>
+            <li>今後やってみたいこと。やってみたい程度のやつ</li>
+            <li>植物の話</li>
+            <li>タクティクスオウガの話。上のサマリでも言及はする</li>
+          </ul>
+        </Section>
         <div>
           <Link href='/' text='To Top' />
         </div>
