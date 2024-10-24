@@ -46,11 +46,7 @@ export default function Index() {
         <Section heading="Private">
           <p>
             私的なことも<Link href="/private" text="趣味" />のページに詳しく記載します。<br />
-            遊びは色々しましたが、今したいのは植物を育てたり勉強したり、地域の公園のメンテとかです。
-            でも子育ても仕事も忙しいので、時間がとれません。<br />
-            またタクティクスオウガというテレビゲームが好きなのですが、対人戦をしたくて、
-            <Link href="https://github.com/motojouya/kniw" text="kniw" />というオリジナルボードゲームを作っています。
-            が、まだ見せれるレベルにはありません。<br />
+            サマリにも書いてある、植物のことと、オリジナルボードゲーム(<Link href="https://github.com/motojouya/kniw" text="kniw" />)のことが最近の最も関心のあることです。
           </p>
         </Section>
       </div>
