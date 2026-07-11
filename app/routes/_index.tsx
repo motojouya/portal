@@ -19,7 +19,7 @@ export default function Index() {
           <ul className={css({ listStyle: 'square outside', paddingLeft: '20px' })}>
             <li>千葉の東葛飾で、妻1人、子2人と暮らしている</li>
             <li>Webシステムを主にプログラマとして働いている</li>
-            <li>植物を育てたり勉強したりしたいができていない</li>
+            <li>プログラミングは仕事であり趣味と思っている</li>
             <li>タクティクスオウガというテレビゲームが好きで、対人戦をしたく、オリジナルボードゲームを制作している</li>
           </ul>
         </Section>
@@ -46,7 +46,7 @@ export default function Index() {
         <Section heading="Private">
           <p>
             私的なことも<Link href="/private" text="趣味" />のページに詳しく記載します。<br />
-            サマリにも書いてある、植物のことと、オリジナルボードゲーム(<Link href="https://github.com/motojouya/kniw" text="kniw" />)のことが最近の最も関心のあることです。
+            サマリにも書いてある、プログラミングのことと、オリジナルボードゲーム(<Link href="https://github.com/motojouya/shogi_tactics/" text="将棋タクティクス" />)のことが最近の最も関心のあることです。
           </p>
         </Section>
       </div>
